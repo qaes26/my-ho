@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى حبيبتي رهف</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #9d174d; /* Elegant Deep Pink/Rose */
+            --bg-color: #fff1f2; /* Soft Rose White */
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-color);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .amiri-font {
+            font-family: 'Amiri', serif;
+        }
+
+        /* Hero Section Parallax */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1494972308805-463bc619d34e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover fixed;
+            color: white;
+        }
+
+        .hero-content {
+            animation: fadeInDown 1.5s ease-out forwards;
+        }
+
+        /* Elegant Cards */
+        .story-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(157, 23, 77, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #fce7f3;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(157, 23, 77, 0.15);
+        }
+
+        .image-container img {
+            transition: transform 0.7s ease;
+        }
+
+        .story-card:hover .image-container img {
+            transform: scale(1.05);
+        }
+
+        /* Scroll Animations */
+        .fade-in-element {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in-element.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keyframes */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce-slow 2s infinite;
+            cursor: pointer;
+        }
+
+        /* Decorative Line */
+        .decor-line {
+            width: 80px;
+            height: 2px;
+            background-color: var(--primary-color);
+            margin: 1.5rem auto;
+        }
+
+        /* Typewriter Specific Styles */
+        .typewriter-target {
+            opacity: 0; /* Hidden initially, JS will reveal it */
+            min-height: 1em; /* Prevent layout shift */
+        }
+
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+            margin-right: 4px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="hero">
+        <div class="hero-content px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 text-[#ffe4e6] typewriter-target" data-speed="80">إلى حبيبتي رهف</h1>
+            <div class="decor-line bg-[#ffe4e6]"></div>
+            <p class="text-xl md:text-3xl amiri-font italic text-gray-200 typewriter-target" data-speed="50">"أنتِ البداية لكل شيء جميل، وأنتِ مسك الختام"</p>
+        </div>
+        
+        <div class="scroll-indicator" onclick="scrollToContent()">
+            <i class="fas fa-chevron-down text-3xl text-white opacity-70 hover:opacity-100 transition"></i>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-20 max-w-5xl" id="content">
+        
+        <!-- Intro Text -->
+        <div class="text-center mb-20 fade-in-element">
+            <i class="fas fa-heart text-4xl text-[#9d174d] opacity-20 mb-4"></i>
+            <h2 class="text-3xl md:text-4xl text-gray-800 amiri-font leading-relaxed typewriter-target" data-speed="40">
+                إلى من تسكن الروح وتملأ القلب نوراً..<br>
+                أهدي هذه الحروف لعينيكِ، لأنكِ أجمل أقداري.
+            </h2>
+        </div>
+
+        <!-- Section 1: Rahaf -->
+        <div class="story-card flex flex-col md:flex-row mb-16 fade-in-element">
+            <div class="md:w-1/2 image-container relative h-80 md:h-auto overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="ورود رومانسية" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="md:w-1/2 p-10 md:p-16 flex flex-col justify-center">
+                <div class="text-[#9d174d] mb-2 text-sm font-bold tracking-wider">نبض القلب</div>
+                <h3 class="text-4xl amiri-font mb-6 text-gray-800 typewriter-target" data-speed="70">رهـــف</h3>
+                <p class="text-gray-600 leading-loose text-lg mb-6 typewriter-target" data-speed="25">
+                    منذ أن عرفتكِ، أدركت أن الحياة تخبئ لي أجمل هداياها في ملامحكِ. ضحكتكِ هي السلام الذي أبحث عنه، ووجودكِ هو الأمان الذي يغنيني عن العالم بأسره. أحبكِ اليوم، وغداً، وإلى الأبد يا سيدة قلبي.
+                </p>
+                <div class="flex items-center gap-3 text-[#9d174d]">
+                    <i class="fas fa-infinity fade-in-element"></i>
+                    <span class="amiri-font text-lg italic fade-in-element">حبيبكِ الذي يرى الدنيا بكِ</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: The Promise -->
+        <div class="story-card flex flex-col md:flex-row-reverse mb-16 fade-in-element">
+            <div class="md:w-1/2 image-container relative h-80 md:h-auto overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="لحظة رومانسية" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="md:w-1/2 p-10 md:p-16 flex flex-col justify-center text-right md:text-left">
+                <div class="text-[#9d174d] mb-2 text-sm font-bold tracking-wider md:text-right">وعد الأيام</div>
+                <h3 class="text-4xl amiri-font mb-6 text-gray-800 md:text-right typewriter-target" data-speed="70">نجمتي المضيئة</h3>
+                <p class="text-gray-600 leading-loose text-lg mb-6 md:text-right typewriter-target" data-speed="25">
+                    أعدكِ أن أبقى السند الذي لا يميل، وأن أكون دائماً الوجه الذي يبتسم لكِ حين يعبس العالم. أنتِ لستِ فقط حبيبتي، بل أنتِ الحياة بكل ما فيها من ألوان وجمال. يا أجمل صدفة غيرت مجرى أيامي.
+                </p>
+                <div class="flex items-center gap-3 text-[#9d174d] md:justify-end">
+                    <span class="amiri-font text-lg italic fade-in-element">دائماً وأبداً.. لكِ</span>
+                    <i class="fas fa-heart fade-in-element"></i>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center pt-16 pb-8 border-t-4 border-[#9d174d]">
+        <div class="container mx-auto px-6 fade-in-element">
+            <i class="fas fa-envelope-open-text text-4xl mb-4 text-[#9d174d]"></i>
+            <h4 class="text-2xl amiri-font mb-2 typewriter-target" data-speed="50">مع كل الحب والأشواق</h4>
+            <p class="text-2xl text-pink-200 amiri-font font-bold typewriter-target" data-speed="60">قيــــس</p>
+
+            <!-- حقوق التصميم والتوقيع -->
+            <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col items-center justify-center gap-2 fade-in-element">
+                <p class="text-gray-500 text-sm font-light">تمت البرمجة والتصميم بكل حُب</p>
+                <div class="flex items-center gap-2 px-5 py-2.5 bg-gray-800 rounded-full border border-gray-700 shadow-lg transition-transform hover:scale-105 cursor-default">
+                    <i class="fas fa-code text-[#9d174d] text-sm"></i>
+                    <span class="text-gray-300 text-sm">إعداد: <strong class="text-white font-bold ml-1 text-base">قيس جازي</strong></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll to content function for the arrow in hero section
+        function scrollToContent() {
+            document.getElementById('content').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // --- Typewriter Logic ---
+            const typeTargets = document.querySelectorAll('.typewriter-target');
+            
+            // Store original HTML and clear it to prepare for typing
+            typeTargets.forEach(el => {
+                el.setAttribute('data-html', el.innerHTML);
+                el.innerHTML = '';
+            });
+
+            function startTyping(element) {
+                // Prevent re-typing
+                if (element.hasAttribute('data-typed')) return;
+                element.setAttribute('data-typed', 'true');
+                
+                element.style.opacity = 1;
+                element.classList.add('typing-cursor');
+                
+                const html = element.getAttribute('data-html');
+                const baseSpeed = parseInt(element.getAttribute('data-speed')) || 50;
+                let i = 0;
+                let isTag = false;
+                let text = '';
+                
+                function type() {
+                    if (i < html.length) {
+                        let char = html.charAt(i);
+                        
+                        // Handle HTML tags so they render instantly and don't break
+                        if (char === '<') isTag = true;
+                        text += char;
+                        if (char === '>') isTag = false;
+                        
+                        element.innerHTML = text;
+                        i++;
+                        
+                        // If it's inside a tag, type it instantly (0ms), otherwise use the defined speed
+                        let currentSpeed = isTag ? 0 : baseSpeed;
+                        setTimeout(type, currentSpeed);
+                    } else {
+                        // Typing finished, remove the cursor after 2 seconds
+                        setTimeout(() => {
+                            element.classList.remove('typing-cursor');
+                        }, 2000);
+                    }
+                }
+                
+                // Add a small initial delay before typing starts
+                setTimeout(type, 300);
+            }
+
+            // --- Intersection Observer (Scroll Trigger) ---
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.2
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        
+                        // Handle Fade-in elements
+                        if (el.classList.contains('fade-in-element')) {
+                            el.classList.add('visible');
+                        }
+                        
+                        // Trigger typewriter for elements inside the visible section
+                        const innerTypewriters = el.querySelectorAll('.typewriter-target');
+                        innerTypewriters.forEach((target, index) => {
+                            // Stagger the typing if there are multiple texts in one block
+                            setTimeout(() => {
+                                startTyping(target);
+                            }, index * 400); 
+                        });
+                        
+                        // Trigger if the element itself is a typewriter target (like Hero section texts)
+                        if (el.classList.contains('typewriter-target')) {
+                            startTyping(el);
+                        }
+
+                        observer.unobserve(el);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe containers and standalone targets
+            const elementsToObserve = document.querySelectorAll('.fade-in-element, #hero');
+            elementsToObserve.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
+
